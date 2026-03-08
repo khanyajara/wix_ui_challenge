@@ -1,0 +1,384 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Privacy Policy | Auto Insure</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --navy-900:#050b2a;
+      --navy-850:#060f33;
+      --navy-800:#071341;
+      --ink:#e8edf6;
+      --muted:#b8c0d6;
+      --line:rgba(255,255,255,.16);
+      --shadow: 0 10px 30px rgba(0,0,0,.35);
+      --radius: 16px;
+      --max: 1120px;
+
+      --paper:#cfd8ff;
+      --paper-2:#dbe2ff;
+      --dark:#0a0f2f;
+    }
+
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      color:var(--ink);
+      background:var(--navy-900);
+    }
+    a{color:inherit}
+    .container{max-width:var(--max); margin:0 auto; padding:0 20px}
+
+    .topbar{
+      position:sticky;
+      top:0;
+      z-index:50;
+      background:linear-gradient(180deg, rgba(5,11,42,.95), rgba(5,11,42,.75));
+      backdrop-filter: blur(10px);
+      border-bottom:1px solid rgba(255,255,255,.08);
+    }
+    .nav{
+      height:74px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:20px;
+    }
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:10px;
+      font-weight:600;
+      letter-spacing:.2px;
+    }
+    .logoMark{
+      width:28px;height:28px;
+      border-radius:8px;
+      background:linear-gradient(135deg, rgba(255,255,255,.18), rgba(255,255,255,.04));
+      border:1px solid rgba(255,255,255,.18);
+      display:grid;
+      place-items:center;
+    }
+    .logoMark span{
+      width:10px;height:10px;
+      border-radius:3px;
+      background:rgba(255,255,255,.85);
+      display:block;
+      transform:rotate(10deg);
+    }
+    .menu{
+      display:flex;
+      align-items:center;
+      gap:22px;
+      font-size:12px;
+      letter-spacing:.18em;
+      text-transform:uppercase;
+      color:rgba(232,237,246,.86);
+    }
+    .menu a{opacity:.9; text-decoration:none}
+    .menu a:hover{opacity:1}
+    .cta{
+      padding:10px 14px;
+      border-radius:12px;
+      border:1px solid rgba(255,255,255,.25);
+      background:rgba(255,255,255,.06);
+      box-shadow: 0 10px 25px rgba(0,0,0,.18);
+      letter-spacing:.12em;
+    }
+
+    .hero{
+      padding:44px 0 28px;
+      background:
+        radial-gradient(1000px 420px at 20% 0%, rgba(255,255,255,.09), transparent 55%),
+        radial-gradient(900px 600px at 80% 20%, rgba(87,120,255,.12), transparent 60%),
+        linear-gradient(180deg, var(--navy-900), var(--navy-850));
+      border-bottom:1px solid rgba(255,255,255,.10);
+    }
+    .heroInner{
+      padding:18px 0 6px;
+      text-align:center;
+    }
+    .kicker{
+      font-size:12px;
+      color:rgba(232,237,246,.72);
+      letter-spacing:.14em;
+      text-transform:uppercase;
+      margin-bottom:10px;
+    }
+    h1{
+      font-family:Cinzel, serif;
+      font-weight:600;
+      letter-spacing:.03em;
+      margin:0 0 10px;
+      font-size:44px;
+      line-height:1.1;
+    }
+    .sub{
+      margin:0 auto;
+      max-width:70ch;
+      font-size:13px;
+      line-height:1.65;
+      color:rgba(232,237,246,.70);
+    }
+
+    .card{
+      margin:22px auto 44px;
+      max-width:860px;
+      background:rgba(255,255,255,.03);
+      border:1px solid rgba(255,255,255,.14);
+      border-radius:18px;
+      box-shadow: var(--shadow);
+      overflow:hidden;
+    }
+    .cardHeader{
+      padding:18px 18px 14px;
+      border-bottom:1px solid rgba(255,255,255,.12);
+      background:rgba(255,255,255,.02);
+    }
+    .cardHeader h2{
+      font-family:Cinzel, serif;
+      margin:0;
+      font-size:16px;
+      font-weight:500;
+      letter-spacing:.10em;
+      text-transform:uppercase;
+      color:rgba(232,237,246,.86);
+    }
+    .cardBody{
+      padding:18px;
+      display:grid;
+      gap:14px;
+    }
+    .cardBody h3{
+      margin:10px 0 0;
+      font-size:12px;
+      letter-spacing:.14em;
+      text-transform:uppercase;
+      color:rgba(232,237,246,.82);
+    }
+    .cardBody p{
+      margin:0;
+      font-size:13px;
+      line-height:1.75;
+      color:rgba(232,237,246,.70);
+    }
+    .cardBody a{
+      color:rgba(220,230,255,.95);
+      text-decoration:underline;
+      text-underline-offset:3px;
+    }
+    .note{
+      padding:14px 16px;
+      border-radius:14px;
+      border:1px solid rgba(255,255,255,.14);
+      background:rgba(255,255,255,.04);
+      color:rgba(232,237,246,.74);
+      font-size:12px;
+      line-height:1.7;
+    }
+
+    .footerTop{
+      background:linear-gradient(180deg, var(--paper), var(--paper-2));
+      color:#0a1033;
+      padding:26px 0;
+      border-top:1px solid rgba(255,255,255,.08);
+    }
+    .footGrid{
+      display:grid;
+      grid-template-columns: 1.1fr 1fr 1fr;
+      gap:18px;
+      align-items:start;
+    }
+    .footBrand{
+      font-family:Cinzel, serif;
+      font-size:18px;
+      letter-spacing:.08em;
+      margin:0 0 6px;
+    }
+    .footSmall{
+      margin:0;
+      color:rgba(10,15,47,.75);
+      font-size:13px;
+      line-height:1.6;
+    }
+    .footCol h4{
+      margin:0 0 10px;
+      font-size:11px;
+      letter-spacing:.14em;
+      text-transform:uppercase;
+      color:rgba(10,15,47,.75);
+    }
+    .footLinks{
+      display:grid;
+      gap:8px;
+      font-size:13px;
+      color:rgba(10,15,47,.78);
+    }
+    .socials{
+      display:flex;
+      gap:10px;
+      align-items:center;
+      margin-top:10px;
+    }
+    .icon{
+      width:34px;height:34px;
+      border-radius:12px;
+      border:1px solid rgba(10,15,47,.18);
+      background:rgba(255,255,255,.55);
+      display:grid;
+      place-items:center;
+      font-weight:700;
+      color:rgba(10,15,47,.8);
+      user-select:none;
+    }
+    .footerBottom{
+      background:rgba(255,255,255,.02);
+      border-top:1px solid rgba(255,255,255,.10);
+      padding:14px 0;
+      color:rgba(232,237,246,.65);
+      font-size:12px;
+    }
+
+    @media (max-width: 980px){
+      .menu{display:none}
+      h1{font-size:38px}
+      .footGrid{grid-template-columns:1fr}
+    }
+  </style>
+</head>
+
+<body>
+  <header class="topbar">
+    <div class="container">
+      <div class="nav">
+        <div class="brand">
+          <div class="logoMark" aria-hidden="true"><span></span></div>
+          <div>Auto Insure</div>
+        </div>
+
+        <nav class="menu" aria-label="Primary">
+          <a href="./index.html#about">About</a>
+          <a href="./index.html#services">Services</a>
+          <a href="./index.html#benefits">Benefits</a>
+          <a class="cta" href="./index.html#contact">Contact Us</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container">
+        <div class="heroInner">
+          <div class="kicker">Auto Insure</div>
+          <h1>Privacy Policy</h1>
+          <p class="sub">
+            This Privacy Policy explains how information may be collected, used, and shared when you use our website
+            and services.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <article class="card">
+          <div class="cardHeader">
+            <h2>Policy Details</h2>
+          </div>
+
+          <div class="cardBody">
+            <div class="note">
+              The explanations and information provided on this page are general. You should not rely on this as legal
+              advice. Consider consulting a qualified professional to ensure your policy matches your business and local
+              regulations.
+            </div>
+
+            <h3>A legal disclaimer</h3>
+            <p>
+              The explanations and information provided on this page are only general and high-level explanations and
+              information on how to write your own document of a Privacy Policy. You should not rely on this as legal
+              advice or as recommendations regarding what you should actually do, because we cannot know in advance what
+              the specific privacy policies you wish to establish between your business and your customers and visitors.
+              We recommend that you seek legal advice to help you understand and to assist you in the creation of your
+              own privacy policy.
+            </p>
+
+            <h3>Privacy Policy - the basics</h3>
+            <p>
+              A privacy policy is a statement that discloses some or all of the ways a website collects, uses, discloses,
+              processes, and manages the data of its visitors and customers. It usually also includes a statement
+              regarding the website’s commitment to protecting its visitors’ or customers’ privacy, and an explanation
+              about the different mechanisms the website is implementing in order to protect privacy.
+            </p>
+            <p>
+              Different jurisdictions have different legal obligations of what must be included in a privacy policy. You
+              are responsible to make sure you are following the relevant legislation to your activities and location.
+            </p>
+
+            <h3>What to include in the Privacy Policy</h3>
+            <p>
+              Generally speaking, a privacy policy often addresses these types of issues: the types of information the
+              website is collecting and the manner in which it collects the data; an explanation of why the website is
+              collecting these types of information; what are the website’s practices on sharing the information with
+              third parties; ways in which your visitors and customers can exercise their rights according to the
+              relevant privacy legislation; the specific practices regarding minors’ data collection; and much, much
+              more.
+            </p>
+            <p>
+              To learn more about this, check out our article
+              <a href="#" aria-label="Creating a Privacy Policy">“Creating a Privacy Policy”</a>.
+            </p>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footerTop">
+      <div class="container">
+        <div class="footGrid">
+          <div>
+            <p class="footBrand">Auto Insure</p>
+            <p class="footSmall">+27 76 490 2903</p>
+            <p class="footSmall">info@mysite.com</p>
+          </div>
+
+          <div class="footCol">
+            <h4>Links</h4>
+            <div class="footLinks">
+              <a href="./index.html">Home</a>
+              <a href="./privacy.html">Privacy Policy</a>
+              <a href="./accessibility.html">Accessibility Statement</a>
+            </div>
+          </div>
+
+          <div class="footCol">
+            <h4>Social</h4>
+            <div class="socials" aria-label="Social links">
+              <div class="icon" title="Instagram">IG</div>
+              <div class="icon" title="Facebook">F</div>
+              <div class="icon" title="LinkedIn">in</div>
+              <div class="icon" title="X">X</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footerBottom">
+      <div class="container">
+        © 2035 by Auto Insure. Powered and secured by Wix
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
